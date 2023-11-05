@@ -72,9 +72,7 @@ const updateContact = asyncHandler(async (req, res) => {
     res.status(200).json(updatedContact);
   });
 
-//@desc Delete all contacts
-//@route DELETE /api/contacts/:id
-//@access public
+
 //@desc Delete a contact
 //@routs DELETE /api/contacts/:id
 //@access private
@@ -89,7 +87,7 @@ const deleteContact = asyncHandler(async (req, res) => {
       res.status(402);
       throw new Error("User don't have permission to update this");
     }
-    
+
     await Contact.deleteOne({ _id: req.params.id });
     res.status(200).json(contact); 
   });
