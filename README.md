@@ -29,5 +29,3 @@
 
 - **Data Integrity and Security:**
   - Established and maintained data integrity and security through robust authentication and authorization mechanisms, building trust in the application.
-
-*Please note: This information is intended for inclusion in the README.md file of the GitHub repository and may be adjusted to fit the specific format and style of your README.*
