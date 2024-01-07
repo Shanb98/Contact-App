@@ -54,7 +54,7 @@ const registerUser = asyncHandler(async(req,res) =>{
 //@routs POST /api/users/login
 //@access public
 const loginUser = asyncHandler(async(req,res) =>{
-      //taking the email and password from the body
+      //fetching the email and password from the body
   const { email, password } = req.body;
   if (!email || !password) {
     res.status(400);

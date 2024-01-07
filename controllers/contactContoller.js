@@ -3,10 +3,10 @@ const  Contact = require("../models/contactModel")
 //@desc Get all contacts
 //@route GET /api/contacts
 //@access private
-const getContacts = asyncHandler(async (req, res) => {
+const getContacts = asyncHandler(async (req, res) => {    //async makes a function return a Promise
   //getting the contacts from the db
   //getting all the contacts created by the login in user
-  const contacts = await Contact.find({ user_id: req.user.id });
+  const contacts = await Contact.find({ user_id: req.user.id });  //await makes a function wait for a Promise
     res.status(200).json(contacts);
   });
 
