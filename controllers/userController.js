@@ -7,7 +7,8 @@ const bcrypt = require("bcrypt");
 //@routs POST /api/users/register
 //@access public
 const registerUser = asyncHandler(async(req,res) =>{
-    const { username, email, password } = req.body;
+  //destructuring the request body sent from the client side
+  const { username, email, password } = req.body;
   
     //checking weather the fileds are empty
     if( !username || !email || !password){
@@ -37,7 +38,7 @@ const registerUser = asyncHandler(async(req,res) =>{
 
     console.log(`User created ${user}`);
 
-        //if user is successfully created send the info to the user
+    //if user is successfully created send the info to the user
     if(user){
         res.status(201).json({ 
             _id : user.id,

@@ -11,7 +11,7 @@ const validateToken = require("../middleware/validateTokenHandler");
 
 //once you made all the contact routes private it should be validated
 //using the validateToken middle weare to validate the route
-router.use(validateToken);
+router.use(validateToken);   //this will walidate all the rutes
 router.route("/").get(getContacts).post(createContact);
 router.route("/:id").get(getContact).put(updateContact).delete(deleteContact);
 
